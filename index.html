@@ -64,7 +64,9 @@
       <section class="hero section overlay">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-btn" type="button">Заказать услугу</button>
+          <button data-modal-open class="hero-btn" type="button">
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -131,25 +133,34 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="about-list list">
             <li class="about-item">
-              <img
-                src="./images/coding.jpg"
-                width="370"
-                alt="Программирование"
-              />
+              <div class="about-actions">
+                <img
+                  src="./images/coding.jpg"
+                  width="370"
+                  alt="Программирование"
+                />
+                <p class="about-text">Десктопные приложения</p>
+              </div>
             </li>
             <li class="about-item">
-              <img
-                src="./images/phone.jpg"
-                width="370"
-                alt="Создание приложений для мобильных устройств"
-              />
+              <div class="about-actions">
+                <img
+                  src="./images/phone.jpg"
+                  width="370"
+                  alt="Создание приложений для мобильных устройств"
+                />
+                <p class="about-text">Мобильные приложения</p>
+              </div>
             </li>
             <li class="about-item">
-              <img
-                src="./images/design.jpg"
-                width="370"
-                alt="Разработка дизайна"
-              />
+              <div class="about-actions">
+                <img
+                  src="./images/design.jpg"
+                  width="370"
+                  alt="Разработка дизайна"
+                />
+                <p class="about-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -320,7 +331,7 @@
         </div>
       </section>
 
-      <!-- Clients -->
+      <!-- Секция 5 - Клиенты -->
       <section class="clients section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
@@ -365,6 +376,7 @@
         </div>
       </section>
     </main>
+
     <!-- Підвал -->
     <footer class="footer">
       <div class="container footer-content">
@@ -428,5 +440,23 @@
         </div>
       </div>
     </footer>
+
+    <!-- Модальне вікно -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p></p>
+        <button class="modal-btn-close" data-modal-close>
+          <svg
+            class="close-icon"
+            width="11px"
+            height="11px"
+            aria-label="Закрыть"
+          >
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
